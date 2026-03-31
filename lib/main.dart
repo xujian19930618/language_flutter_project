@@ -1,8 +1,203 @@
 import 'package:flutter/material.dart';
 
+import 'container.dart';
+
 void main() {
-  runApp(const MyApp());
+  runApp(MainPage());
+  // runApp(const MyApp());
+  // runApp(MaterialApp(
+  //   title: "xujian",
+  //   theme: ThemeData(
+  //     scaffoldBackgroundColor: Colors.blue
+  //   ),
+  //
+  //   home: Scaffold(
+  //     appBar: AppBar(
+  //       title: Text("头部区域"),
+  //     ),
+  //     body: Container(
+  //       child: Center(
+  //         child: Text("中部区域"),
+  //       ),
+  //     ),
+  //     bottomNavigationBar: Container(
+  //       height: 80,
+  //       child: Center(
+  //         child: Text("底部区域"),
+  //       ),
+  //     ),
+  //   ),
+  // ));
 }
+
+// class MainPage extends StatelessWidget {
+//   const MainPage({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     return MaterialApp(
+//
+//       home: Scaffold(
+//           body: Align(
+//             alignment: Alignment.bottomRight,
+//             child: Text(
+//               "Hello Container",
+//               style: TextStyle(color: Colors.amber, fontSize: 20),
+//             ),
+//           )
+//         // body: Container(
+//         //   transform: Matrix4.rotationZ(0.05), // 弧度
+//         //   margin: EdgeInsets.all(20), // 外边距
+//         //   alignment: Alignment.center,
+//         //   width: 200,
+//         //   height: 200,
+//         //   // color: Colors.blue,
+//         //   decoration: BoxDecoration(
+//         //     color: Colors.blue,
+//         //     borderRadius: BorderRadius.circular(15),
+//         //     border: Border.all(width: 3, color: Colors.amber)
+//         //   ),
+//         //
+//         // ),
+//       ),
+//     );
+//   }
+// }
+
+// class MainPage extends StatefulWidget {
+//   const MainPage({super.key});
+//
+//   @override
+//   State<StatefulWidget> createState() {
+//     print("创建阶段: createState");
+//     return _MainPageState();
+//   }
+// }
+// class _MainPageState extends State<MainPage> {
+//   int count = 0;
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         body: Center(
+//           child: Row(
+//             children: [
+//               TextButton(
+//                 onPressed: () {
+//                   setState(() {
+//                     count++;
+//                   });
+//                 },
+//                 child: Text("减"),
+//               ),
+//               Text(count.toString()),
+//               TextButton(
+//                 onPressed: () {
+//                   setState(() {
+//                     count--;
+//                   });
+//                 },
+//                 child: Text("加"),
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+//
+// class _MainPageState extends State<MainPage> {
+//
+//   @override
+//   void initState() {
+//     print("创建阶段: initState");
+//     super.initState();
+//   }
+//   @override
+//   void didChangeDependencies() {
+//     print("创建阶段: didChangeDependencies");
+//     super.didChangeDependencies();
+//   }
+//   @override
+//   Widget build(BuildContext context) {
+//     print("构建: build");
+//     throw UnimplementedError();
+//   }
+//   @override
+//   void didUpdateWidget(covariant MainPage oldWidget) {
+//     print("更新阶段: didUpdateWidget");
+//     super.didUpdateWidget(oldWidget);
+//   }
+//   @override
+//   void deactivate() {
+//     print("销毁阶段: deactivate");
+//     super.deactivate();
+//   }
+//   @override
+//   void dispose() {
+//     print("销毁阶段: dispose");
+//     super.dispose();
+//   }
+// }
+
+// class _MainPageState extends State<MainPage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     throw MaterialApp(
+//       title: "Flutter",
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text("头部区域"),
+//         ),
+//         body: Container(
+//           child: Center(
+//             child: Text("中部区域"),
+//           ),
+//         ),
+//         bottomNavigationBar: Container(
+//           height: 80,
+//           child: Center(
+//             child: Text("底部区域"),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+//
+// }
+
+// class MainPage extends StatelessWidget {
+//   const MainPage({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     return MaterialApp(
+//       title: "标题",
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text("头部区域"),
+//         ),
+//         body: Container(
+//           child: Center(
+//             child: Text("中部区域"),
+//           ),
+//         ),
+//         bottomNavigationBar: Container(
+//           height: 80,
+//           child: Center(
+//             child: Text("底部区域"),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
