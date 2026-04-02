@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:language_flutter_project/widget/StatefulW.dart';
 
-import 'component/container.dart';
+
+
+import 'demo.dart';
 
 void main() {
-  runApp(MainPage());
-
+  // 将根组件挂载到屏幕上
+  runApp(StatefulW());
 }
-
-
-
 
 // class MainPage1 extends StatelessWidget {
 //   const MainPage1({super.key});

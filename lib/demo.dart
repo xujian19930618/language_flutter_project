@@ -1,16 +1,34 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MainPage extends StatelessWidget {
+class Demo extends StatelessWidget {
+  const Demo({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: '徐剑',
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.blue
-      ),
-      home: const Scaffold(),
-    );
+    return
+      // 为应用提供 Material Design 风格和全局配置
+      MaterialApp(
+        // 用于展示窗口的标题内容(可以不设置)
+        title: 'xujian',
+        // 用于设置整个应用的主题
+        theme: ThemeData(scaffoldBackgroundColor: Colors.blue),
+        // 快速搭建页面骨架, 用于展示窗口的主题内容
+        home: Scaffold(
+          appBar: AppBar(
+            title: const Text('头部区域'),
+          ),
+          body: Center(
+            child: Text('中部区域'),
+          ),
+          bottomNavigationBar: SizedBox(
+            height: 80,
+            child: Center(
+              child: Text('底部区域'),
+            ),
+          ),
+        ),
+      );
   }
 
 }
