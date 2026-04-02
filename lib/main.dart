@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:language_flutter_project/widget/StatefulW.dart';
-
-
+import 'package:language_flutter_project/widget/LifecycleDemo.dart';
 
 import 'demo.dart';
 
 void main() {
   // 将根组件挂载到屏幕上
-  runApp(StatefulW());
+  runApp(LifecycleDemo());
 }
 
 // class MainPage1 extends StatelessWidget {
