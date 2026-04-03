@@ -40,6 +40,7 @@ class _TextbuttondemoState extends State<Textbuttondemo2> {
       home: Scaffold(
         body: Center(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextButton(
                 onPressed: () {

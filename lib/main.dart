@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:language_flutter_project/component/ContainerDemo.dart';
 import 'package:language_flutter_project/widget/GestureDetectorDemo.dart';
 // import 'package:language_flutter_project/widget/LifecycleStatefulW.dart';
 import 'package:language_flutter_project/widget/LifecycleStatelessW.dart';
@@ -6,7 +7,7 @@ import 'package:language_flutter_project/widget/TextButtonDemo.dart';
 
 void main() {
   // 将根组件挂载到屏幕上
-  runApp(Textbuttondemo2());
+  runApp(ContainerDemo());
 }
 
 // class MainPage1 extends StatelessWidget {
