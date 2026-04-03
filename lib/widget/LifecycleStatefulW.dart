@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class LifecycleDemo extends StatefulWidget {
-  const LifecycleDemo({super.key});
+class LifecycleStatefulW extends StatefulWidget {
+  const LifecycleStatefulW({super.key});
 
   @override
   State<StatefulWidget> createState() {
@@ -11,7 +10,9 @@ class LifecycleDemo extends StatefulWidget {
   }
 }
 
-class _LifecycleDemoState extends State<LifecycleDemo> {
+class _LifecycleDemoState extends State<LifecycleStatefulW> {
+  int count = 0;
+
   @override
   void initState() {
     debugPrint("创建阶段: initState");
@@ -37,14 +38,16 @@ class _LifecycleDemoState extends State<LifecycleDemo> {
       // 快速搭建页面骨架, 用于展示窗口的主题内容
       home: Scaffold(
         appBar: AppBar(title: const Text('有状态组件')),
-        body: Center(child: Text("hello world")),
+        body: Center(child: Text("${count}")),
         bottomNavigationBar: SizedBox(
           height: 80,
           child: Center(child: Text("底部区域")),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            setState(() {});
+            setState(() {
+              count++;
+            });
           },
           child: const Icon(Icons.add),
         ),
@@ -53,7 +56,7 @@ class _LifecycleDemoState extends State<LifecycleDemo> {
   }
 
   @override
-  void didUpdateWidget(covariant LifecycleDemo oldWidget) {
+  void didUpdateWidget(covariant LifecycleStatefulW oldWidget) {
     debugPrint("更新阶段: didUpdateWidget");
     super.didUpdateWidget(oldWidget);
   }

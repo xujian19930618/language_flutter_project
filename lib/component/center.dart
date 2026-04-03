@@ -6,7 +6,7 @@ class MainPage extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    print("创建阶段: createState");
+    debugPrint("创建阶段: createState");
     return _MainPageState();
   }
 }
