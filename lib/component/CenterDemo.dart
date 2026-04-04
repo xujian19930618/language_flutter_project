@@ -13,7 +13,6 @@ class CenterDemo extends StatefulWidget {
 class _CenterDemoState extends State<CenterDemo> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     throw MaterialApp(
       title: "Flutter",
       home: Scaffold(
