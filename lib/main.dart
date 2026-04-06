@@ -4,6 +4,7 @@ import 'package:language_flutter_project/component/ContainerDemo.dart';
 import 'package:language_flutter_project/layout/ColumnDemo.dart';
 import 'package:language_flutter_project/layout/FlexDemo.dart';
 import 'package:language_flutter_project/layout/RowDemo.dart';
+import 'package:language_flutter_project/layout/StackDemo.dart';
 import 'package:language_flutter_project/layout/WrapDemo.dart';
 import 'package:language_flutter_project/widget/GestureDetectorDemo.dart';
 import 'package:language_flutter_project/widget/LifecycleStatefulW.dart';
@@ -27,7 +28,8 @@ class MainDemo extends StatelessWidget {
       // home: const ColumnDemo(),
       // home: const RowDemo(),
       // home: FlexDemo(),
-      home: WrapDemo(),
+      // home: WrapDemo(),
+      home: StackDemo(),
     );
   }
 }
