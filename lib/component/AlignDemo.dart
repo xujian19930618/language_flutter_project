@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AlignDemo extends StatelessWidget {
-  const AlignDemo({Key? key}) : super(key: key);
+  const AlignDemo({super.key});
 
   @override
   Widget build(BuildContext context) {
