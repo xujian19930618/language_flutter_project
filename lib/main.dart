@@ -6,6 +6,9 @@ import 'package:language_flutter_project/layout/FlexDemo.dart';
 import 'package:language_flutter_project/layout/RowDemo.dart';
 import 'package:language_flutter_project/layout/StackDemo.dart';
 import 'package:language_flutter_project/layout/WrapDemo.dart';
+import 'package:language_flutter_project/text/ImageDemo.dart';
+import 'package:language_flutter_project/text/TextDemo.dart';
+import 'package:language_flutter_project/text/TextSpan.dart';
 import 'package:language_flutter_project/widget/GestureDetectorDemo.dart';
 import 'package:language_flutter_project/widget/LifecycleStatefulW.dart';
 import 'package:language_flutter_project/widget/LifecycleStatelessW.dart';
@@ -29,7 +32,10 @@ class MainDemo extends StatelessWidget {
       // home: const RowDemo(),
       // home: FlexDemo(),
       // home: WrapDemo(),
-      home: StackDemo(),
+      // home: StackDemo(),
+      // home: TextDemo(),
+      // home: TextSpanDemo(),
+      home: ImageDemo(),
     );
   }
 }
