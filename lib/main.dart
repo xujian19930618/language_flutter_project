@@ -9,8 +9,10 @@ import 'package:language_flutter_project/layout/WrapDemo.dart';
 import 'package:language_flutter_project/text/ImageDemo.dart';
 import 'package:language_flutter_project/text/TextDemo.dart';
 import 'package:language_flutter_project/text/TextSpan.dart';
+import 'package:language_flutter_project/tray/AppTray.dart';
 import 'package:language_flutter_project/tray/AppTrayFactory.dart';
-import 'package:language_flutter_project/tray/tray_mac.dart';
+import 'package:language_flutter_project/tray/MacTray.dart';
+import 'package:language_flutter_project/tray/TrayController.dart';
 import 'package:language_flutter_project/widget/GestureDetectorDemo.dart';
 import 'package:language_flutter_project/widget/LifecycleStatefulW.dart';
 import 'package:language_flutter_project/widget/LifecycleStatelessW.dart';
@@ -36,7 +38,14 @@ void main() async {
   await windowManager.ensureInitialized();
 
   // 延迟初始化托盘
-  MacOSTray().init();
+  // MacOSTray().init();
+
+  // AppTrayFactory.create().init();
+  final tray = AppTrayFactory.create();
+  final controller = TrayController(tray);
+  await controller.init();
+
+
 
   runApp(const MainDemo());
 
