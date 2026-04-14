@@ -22,15 +22,6 @@ import 'animation/FadeInWidget.dart';
 import 'component/PaddingDemo.dart';
 
 void main() async {
-  // 将根组件挂载到屏幕上
-  // runApp(MainDemo());
-  // final tray = AppTrayFactory().create();
-  // await tray.init();
-  // await tray.setMenu([
-  //   TrayMenuItem(label: '显示', onClick: () => tray.showWindow()),
-  //   TrayMenuItem(label: '隐藏', onClick: () => tray.hideWindow()),
-  //   TrayMenuItem(label: '退出', onClick: () => exit(0)),
-  // ]);
 
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -38,14 +29,9 @@ void main() async {
   await windowManager.ensureInitialized();
 
   // 延迟初始化托盘
-  // MacOSTray().init();
-
-  // AppTrayFactory.create().init();
   final tray = AppTrayFactory.create();
   final controller = TrayController(tray);
   await controller.init();
-
-
 
   runApp(const MainDemo());
 
@@ -81,57 +67,3 @@ class MainDemo extends StatelessWidget {
     );
   }
 }
-
-
-// class MainPage1 extends StatelessWidget {
-//   const MainPage1({super.key});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     // TODO: implement build
-//     return MaterialApp(
-//       title: "标题",
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: Text("头部区域"),
-//         ),
-//         body: Container(
-//           child: Center(
-//             child: Text("中部区域"),
-//           ),
-//         ),
-//         bottomNavigationBar: Container(
-//           height: 80,
-//           child: Center(
-//             child: Text("底部区域"),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-// runApp(const MyApp());
-// runApp(MaterialApp(
-//   title: "xujian",
-//   theme: ThemeData(
-//     scaffoldBackgroundColor: Colors.blue
-//   ),
-//
-//   home: Scaffold(
-//     appBar: AppBar(
-//       title: Text("头部区域"),
-//     ),
-//     body: Container(
-//       child: Center(
-//         child: Text("中部区域"),
-//       ),
-//     ),
-//     bottomNavigationBar: Container(
-//       height: 80,
-//       child: Center(
-//         child: Text("底部区域"),
-//       ),
-//     ),
-//   ),
-// ));
