@@ -9,15 +9,37 @@ import 'package:language_flutter_project/layout/WrapDemo.dart';
 import 'package:language_flutter_project/text/ImageDemo.dart';
 import 'package:language_flutter_project/text/TextDemo.dart';
 import 'package:language_flutter_project/text/TextSpan.dart';
+import 'package:language_flutter_project/tray/AppTrayFactory.dart';
+import 'package:language_flutter_project/tray/tray_mac.dart';
 import 'package:language_flutter_project/widget/GestureDetectorDemo.dart';
 import 'package:language_flutter_project/widget/LifecycleStatefulW.dart';
 import 'package:language_flutter_project/widget/LifecycleStatelessW.dart';
 import 'package:language_flutter_project/widget/TextButtonDemo.dart';
+import 'package:window_manager/window_manager.dart';
+import 'animation/FadeInWidget.dart';
 import 'component/PaddingDemo.dart';
 
-void main() {
+void main() async {
   // 将根组件挂载到屏幕上
-  runApp(MainDemo());
+  // runApp(MainDemo());
+  // final tray = AppTrayFactory().create();
+  // await tray.init();
+  // await tray.setMenu([
+  //   TrayMenuItem(label: '显示', onClick: () => tray.showWindow()),
+  //   TrayMenuItem(label: '隐藏', onClick: () => tray.hideWindow()),
+  //   TrayMenuItem(label: '退出', onClick: () => exit(0)),
+  // ]);
+
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // 初始化桌面窗口控制
+  await windowManager.ensureInitialized();
+
+  // 延迟初始化托盘
+  MacOSTray().init();
+
+  runApp(const MainDemo());
+
 }
 
 class MainDemo extends StatelessWidget {
@@ -35,7 +57,18 @@ class MainDemo extends StatelessWidget {
       // home: StackDemo(),
       // home: TextDemo(),
       // home: TextSpanDemo(),
-      home: ImageDemo(),
+      // home: ImageDemo(),
+      home: Column(
+        children: [
+          FadeInWidget(child: Text("Fade In")),
+          ScaleWidget(child: Text("Scale In")),
+          SlideWidget(child: Text("Slide Up")),
+          AnimatedBox(child: Container(width: 100, height: 100, color: Colors.blue)),
+          HeroWidget(tag: "avatar", child: CircleAvatar(radius: 30)),
+          BounceWidget(child: Icon(Icons.favorite, color: Colors.red, size: 40)),
+        ],
+      ),
+
     );
   }
 }
