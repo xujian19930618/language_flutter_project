@@ -1,9 +1,9 @@
 import 'dart:io';
 
-import 'package:language_flutter_project/tray/MacTray.dart';
+import 'package:language_flutter_project/tray/mac_tray.dart';
 
-import 'AppTray.dart';
-import 'WindowsTray.dart';
+import 'app_tray.dart';
+import 'windows_tray.dart';
 
 class AppTrayFactory {
   static AppTray create() {

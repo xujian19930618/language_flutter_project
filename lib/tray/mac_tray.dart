@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:system_tray/system_tray.dart';
 import 'package:window_manager/window_manager.dart';
 
-import 'AppTray.dart';
+import 'app_tray.dart';
 
 /// macOS / Linux 系统托盘实现（基于 system_tray）
 class MacOSTray implements AppTray {

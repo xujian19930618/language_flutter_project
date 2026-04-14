@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'AppTray.dart';
+import 'app_tray.dart';
 
 class TrayController {
   final AppTray tray;

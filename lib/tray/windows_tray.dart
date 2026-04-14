@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:tray_manager/tray_manager.dart';
 import 'package:window_manager/window_manager.dart';
-import 'AppTray.dart';
+import 'app_tray.dart';
 
 /// Windows 托盘实现（兼容新版 tray_manager）
 class WindowsTray implements AppTray {
