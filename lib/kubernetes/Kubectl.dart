@@ -3,7 +3,11 @@ import 'dart:io';
 
 class Kubectl {
   Future<String> run(List<String> args) async {
-    final result = await Process.run('kubectl', args);
+    final result = await Process.run('kubectl', args,
+        environment: {
+      'KUBECONFIG': "./config"
+        }
+    );
 
     if (result.exitCode != 0) {
       throw Exception(result.stderr);

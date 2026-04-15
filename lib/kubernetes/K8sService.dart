@@ -9,7 +9,7 @@ class K8sService {
   K8sService(this.kubectl);
 
   Future<List<dynamic>> getPods({String? namespace}) async {
-    final args = ['get', 'pods', '-o', 'json'];
+    final args = ['get', 'pods' , '-A', '-o', 'json'];
 
     if (namespace != null) {
       args.insertAll(2, ['-n', namespace]);
@@ -35,6 +35,16 @@ class K8sService {
     if (namespace != null) {
       args.insertAll(1, ['-n', namespace]);
     }
+
+    final process = await Process.start('kubectl', args);
+
+    yield* process.stdout
+        .transform(utf8.decoder)
+        .transform(const LineSplitter());
+  }
+
+  Stream<String> config() async* {
+    final args = ['config', 'current-context'];
 
     final process = await Process.start('kubectl', args);
 
