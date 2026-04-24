@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+//import 'package:language_flutter_project/ai_chat/my_app.dart';
 import 'package:language_flutter_project/tray/app_tray_factory.dart';
 import 'package:language_flutter_project/tray/tray_controller.dart';
 import 'package:window_manager/window_manager.dart';
