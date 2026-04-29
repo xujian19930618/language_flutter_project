@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:language_flutter_project/component/AlignDemo.dart';
-import 'package:language_flutter_project/component/ContainerDemo.dart';
+import 'package:language_flutter_project/component/align_demo.dart';
+import 'package:language_flutter_project/component/container_demo.dart';
 import 'package:language_flutter_project/demo.dart';
 import 'package:language_flutter_project/layout/ColumnDemo.dart';
 import 'package:language_flutter_project/layout/FlexDemo.dart';
@@ -17,8 +17,8 @@ import 'package:language_flutter_project/widget/GestureDetectorDemo.dart';
 import 'package:language_flutter_project/widget/LifecycleStatefulW.dart';
 import 'package:language_flutter_project/widget/LifecycleStatelessW.dart';
 import 'package:language_flutter_project/widget/TextButtonDemo.dart';
-import 'animation/FadeInWidget.dart';
-import 'component/PaddingDemo.dart';
+import 'animation/fade_in_widget.dart';
+import 'component/padding_demo.dart';
 
 
 
