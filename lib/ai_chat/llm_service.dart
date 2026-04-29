@@ -13,11 +13,11 @@ class LlmService {
       url,
       headers: {"Content-Type": "application/json"},
       body: jsonEncode({
-        "model": "qwen3-small:latest",
+        "model": "qwen3.5:9b",
         "messages": [
-          {"role": "user", "content": prompt}
+          {"role": "user", "content": prompt},
         ],
-        "stream": false
+        "stream": false,
       }),
     );
 

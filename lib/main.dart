@@ -5,6 +5,7 @@ import 'package:language_flutter_project/tray/app_tray_factory.dart';
 import 'package:language_flutter_project/tray/tray_controller.dart';
 import 'package:window_manager/window_manager.dart';
 
+import 'ai_chat/my_app.dart';
 import 'kubernetes/k8s_app.dart';
 
 
@@ -20,6 +21,7 @@ void main() async {
   final controller = TrayController(tray);
   await controller.init();
 
-  runApp(K8sApp());
+  // runApp(K8sApp());
 
+  runApp(MyApp());
 }
