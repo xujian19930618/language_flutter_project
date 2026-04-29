@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'kubectl.dart';
+import 'k8s_kubectl.dart';
 
 class K8sService {
   final Kubectl kubectl;

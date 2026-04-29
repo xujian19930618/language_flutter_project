@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'kubectl.dart';
+import 'k8s_kubectl.dart';
 import 'k8s_service.dart';
 
 class K8sApp extends StatelessWidget {
