@@ -23,5 +23,5 @@ void main() async {
 
   // runApp(K8sApp());
 
-  runApp(MyApp());
+  runApp(K8sApp());
 }
