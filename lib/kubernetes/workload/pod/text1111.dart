@@ -10,6 +10,9 @@ class PodNotifier extends ChangeNotifier {
 
   Future<void> load(String ns) async {
     pods = await service.listPods(ns);
+    for (final p in pods) {
+      debugPrint("Loaded: ${p.toString()}");
+    }
     notifyListeners();
   }
 
@@ -52,6 +55,9 @@ class _PodPageState extends State<PodPage> {
 
   @override
   Widget build(BuildContext context) {
+    notifier.pods
+        .map((p) => debugPrint(p.toString()))
+        .toList();
     return AnimatedBuilder(
       animation: notifier,
       builder: (context, _) {

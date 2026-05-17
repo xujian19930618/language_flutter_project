@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:language_flutter_project/routes/ListAaa.dart';
+import 'package:language_flutter_project/routes/ListBbb.dart';
 import 'package:language_flutter_project/tray/app_tray_factory.dart';
 import 'package:language_flutter_project/tray/tray_controller.dart';
 import 'package:window_manager/window_manager.dart';
@@ -23,5 +25,17 @@ void main() async {
 
   // runApp(K8sApp());
 
-  runApp(K8sApp());
+  // runApp(K8sApp());
+
+
+  runApp(
+    MaterialApp(
+      title: "标题",
+      initialRoute: "/aaa",
+      routes: {
+        "/aaa": (context) => ListAaa(),
+        "/bbb":  (context) => ListBbb(),
+      },
+    )
+  );
 }
