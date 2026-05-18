@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:language_flutter_project/tray/mac_tray.dart';
+import 'package:language_flutter_project/basic/tray/mac_tray.dart';
 
 import 'app_tray.dart';
 import 'windows_tray.dart';

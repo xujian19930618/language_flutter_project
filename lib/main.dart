@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:language_flutter_project/routes/ListAaa.dart';
-import 'package:language_flutter_project/routes/ListBbb.dart';
-import 'package:language_flutter_project/tray/app_tray_factory.dart';
-import 'package:language_flutter_project/tray/tray_controller.dart';
+import 'package:language_flutter_project/basic/routes/ListAaa.dart';
+import 'package:language_flutter_project/basic/routes/ListBbb.dart';
+import 'package:language_flutter_project/basic/tray/app_tray_factory.dart';
+import 'package:language_flutter_project/basic/tray/tray_controller.dart';
 import 'package:window_manager/window_manager.dart';
 
 import 'ai_chat/my_app.dart';
